@@ -103,7 +103,7 @@ app.post("/add_user", (req, res) => {
     await newuser.save();
   }
   run();
-  res.redirect('/dashboard');
+  res.redirect('/');
 });
 
 

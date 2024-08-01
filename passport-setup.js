@@ -4,7 +4,7 @@ require('dotenv').config();
 passport.use(new GoogleStrategy({
 	clientID:process.env.ID, // Your Credentials here.
 	clientSecret:process.env.SCRETE, // Your Credentials here.
-	callbackURL:"http://localhost:3000/google/callback",
+	callbackURL:"https://api-security-d7v2.onrender.com/google/callback",
 	passReqToCallback:true
 },
 function(request, accessToken, refreshToken, profile, done) {
