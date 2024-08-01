@@ -1,0 +1,36 @@
+{
+  "name": "Dharon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/selva274/website_VsbBus.git"
+  },
+  "author": "SS brothers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/selva274/website_VsbBus.git"
+  },
+  "homepage": "https://github.com/selva274/website_VsbBus.git",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "build": "^0.1.4",
+    "console": "^0.7.2",
+    "cookie-session": "^2.0.0",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.9",
+    "express": "^4.19.2",
+    "firebase": "^10.12.4",
+    "mongoose": "^7.7.0",
+    "nodemon": "^2.0.22",
+    "passport": "^0.5.3",
+    "passport-facebook": "^3.0.0",
+    "passport-google-oauth2": "^0.2.0"
+  }
+}

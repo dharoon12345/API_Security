@@ -1,0 +1,37 @@
+[debug] [2024-08-01T02:05:12.178Z] ----------------------------------------------------------------------
+[debug] [2024-08-01T02:05:12.182Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\DHAROON\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-08-01T02:05:12.183Z] CLI Version:   13.14.2
+[debug] [2024-08-01T02:05:12.183Z] Platform:      win32
+[debug] [2024-08-01T02:05:12.184Z] Node Version:  v20.15.1
+[debug] [2024-08-01T02:05:12.184Z] Time:          Thu Aug 01 2024 07:35:12 GMT+0530 (India Standard Time)
+[debug] [2024-08-01T02:05:12.184Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-08-01T02:05:12.312Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-08-01T02:05:12.313Z] > authorizing via signed-in user (dharoon2004vk@gmail.com)
+[debug] [2024-08-01T02:05:12.313Z] [iam] checking project api-ede20 for permissions ["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2024-08-01T02:05:12.318Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/api-ede20:testIamPermissions [none]
+[debug] [2024-08-01T02:05:12.319Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/api-ede20:testIamPermissions x-goog-quota-user=projects/api-ede20
+[debug] [2024-08-01T02:05:12.319Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/api-ede20:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2024-08-01T02:05:14.638Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/api-ede20:testIamPermissions 200
+[debug] [2024-08-01T02:05:14.638Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/api-ede20:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2024-08-01T02:05:14.642Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/api-ede20 [none]
+[debug] [2024-08-01T02:05:16.328Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/api-ede20 200
+[debug] [2024-08-01T02:05:16.328Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/api-ede20 {"projectId":"api-ede20","projectNumber":"658301897718","displayName":"apisecure","name":"projects/api-ede20","resources":{"hostingSite":"api-ede20","realtimeDatabaseInstance":"api-ede20-default-rtdb"},"state":"DELETED","etag":"1_3b8a7980-c8fb-414a-b1e9-498a109dc5c7"}
+[debug] [2024-08-01T02:05:16.329Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/api-ede20 [none]
+[debug] [2024-08-01T02:05:17.014Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/api-ede20 200
+[debug] [2024-08-01T02:05:17.014Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/api-ede20 {"projectId":"api-ede20","projectNumber":"658301897718","displayName":"apisecure","name":"projects/api-ede20","resources":{"hostingSite":"api-ede20","realtimeDatabaseInstance":"api-ede20-default-rtdb"},"state":"DELETED","etag":"1_3b8a7980-c8fb-414a-b1e9-498a109dc5c7"}
+[info] 
+[info] === Deploying to 'api-ede20'...
+[info] 
+[info] i  deploying database, hosting 
+[info] i  database: checking rules syntax... 
+[debug] [2024-08-01T02:05:17.022Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/api-ede20/locations/-/instances/api-ede20-default-rtdb [none]
+[debug] [2024-08-01T02:05:19.381Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/api-ede20/locations/-/instances/api-ede20-default-rtdb 404
+[debug] [2024-08-01T02:05:19.381Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/api-ede20/locations/-/instances/api-ede20-default-rtdb {"error":{"code":404,"message":"Project has been deleted.","status":"NOT_FOUND"}}
+[debug] [2024-08-01T02:05:19.383Z] HTTP Error: 404, Project has been deleted.
+[debug] [2024-08-01T02:05:19.995Z] FirebaseError: HTTP Error: 404, Project has been deleted.
+    at responseToError (C:\Users\DHAROON\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\DHAROON\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:305:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get instance details for instance: api-ede20-default-rtdb. See firebase-debug.log for more details.

@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Find your Bus--(Bus-Tracker)</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      background:url("stylesheet\463438.jpg")
+
+    }
+
+    .login-container {
+      background: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .login-container:hover {
+      transform: scale(1.02);
+    }
+
+    .login-image {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .rounded-border {
+      border: 10px solid rgb(255, 0, 0);
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: '';
+      flex: 1;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .divider::before {
+      margin-right: .25em;
+    }
+
+    .divider::after {
+      margin-left: .25em;
+    }
+
+    .social-buttons button {
+      width: 100%;
+      margin-bottom: 10px;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .social-buttons button:hover {
+      background-color: #007bff;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="vh-100 d-flex align-items-center">
+    <div class="container">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-9 col-lg-6 col-xl-5 mb-5">
+          <img src="https://www.skillreactor.io/blog/wp-content/uploads/2024/04/image-21.jpeg" class="img-fluid login-image rounded rounded-border" alt="Sample image">
+        </div>
+        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 login-container">
+          <h2 class="text-center mb-4">Login</h2>
+          <form method='POST' action="/dashboard">
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+              <label class="form-label" for="form3Example3">Email address</label>
+              <input name="email" type="email" id="form3Example3" class="form-control form-control-lg"
+                placeholder="Enter a valid email address" />
+            </div>
+
+            <!-- Password input -->
+            <div class="form-outline mb-3">
+              <label class="form-label" for="form3Example4">Password</label>
+              <input name="password" type="password" id="form3Example4" class="form-control form-control-lg"
+                placeholder="Enter password" />
+            </div>
+
+            <div class="text-center text-lg-start mt-4 pt-2">
+              <button type="submit" class="btn btn-primary btn-lg w-100">Login</button>
+              <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="/register"
+                  class="link-danger">Register</a></p>
+            </div>
+          </form>
+          <div class="divider">
+            <p class="text-center fw-bold mx-3 mb-0">Or</p>
+          </div>
+          <div class="social-buttons d-flex flex-column align-items-center justify-content-center">
+            <a href="/google"><button type="button" class="btn btn-light btn-lg w-100"><i class="fab fa-google me-2"></i> Sign in with Google</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script>
+    function showToast(message) {
+      Toastify({
+        text: message,
+        duration: 3000,
+        close: true,
+        gravity: "top",
+        position: "right",
+        backgroundColor: "linear-gradient(to right, #ff5f6d, #ffc371)",
+        stopOnFocus: true,
+      }).showToast();
+    }
+
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('error')) {
+      showToast("User not found. Please check your credentials and try again.");
+    }
+  </script>
+</body>
+
+</html>

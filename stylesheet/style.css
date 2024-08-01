@@ -1,0 +1,88 @@
+/* Universal Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:url("stylesheet\463438.jpg")
+}
+
+/* Divider Styles */
+.divider:after,
+.divider:before {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #eee;
+}
+
+/* Custom Height */
+.h-custom {
+    height: calc(100% - 73px);
+}
+
+@media (max-width: 450px) {
+    .h-custom {
+        height: 100%;
+    }
+}
+
+/* Card Styles */
+.card {
+    display: block;
+    width: calc(100% - 120px);
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Heading Styles */
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+/* Add responsive font sizing */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.25rem;
+    }
+
+    .card {
+        width: calc(100% - 40px);
+    }
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background: #ff0000;
+    color: #f6f6f6;
+    text-decoration: none;
+    transition: background 0.5s ease;
+}
+
+.btn:hover {
+    background: #feb47b;
+}
+
